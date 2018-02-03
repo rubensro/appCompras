@@ -1,3 +1,23 @@
-<p>
-  registro works!
-</p>
+<div class="row">
+  <div class="col col-md"></div>
+  <div class="col-10 col-md-6">
+    <form [formGroup]="formularioForm"(ngSubmit)="enviarDatos()">
+      <h4>Formulario de Registro</h4>
+     <div class="form-group">
+        <label for="inputEmail">Correo</label>
+        <input type="email" class="form-control" id="inputEmail"
+              placeholder="Correo electrónico"
+              formControlName="email">
+     </div>
+     <div class="form-group">
+        <label for="inputPassword">Contraseña</label>
+        <input type="password" class="form-control" id="inputPassword"
+              placeholder="Contraseña"
+              formControlName="password">
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+  </div>
+  <div class="col col-md"></div>
+</div>
